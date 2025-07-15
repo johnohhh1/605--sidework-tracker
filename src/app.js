@@ -32,6 +32,10 @@ const SideworkApp = () => {
       sending: "Sending...",
       emailSent: "Email sent successfully! Redirecting...",
       emailError: "Email service unavailable. Opening backup email...",
+      serverTasks: "Server Tasks",
+      bartenderTasks: "Bartender Tasks", 
+      togoTasks: "To-Go Tasks",
+      busserTasks: "Busser Tasks",
       back: "Back",
       am: "AM",
       pm: "PM",
@@ -41,7 +45,10 @@ const SideworkApp = () => {
         'prep-dish': 'Prep & Dish',
         'line-cook': 'Line Cook', 
         'janitorial': 'Janitorial',
-        'server-bar': 'Server, Bar, To-Go, Busser',
+        'server': 'Server',
+        'bartender': 'Bartender',
+        'to-go': 'To-Go',
+        'busser': 'Busser',
         'runner-qa': 'Runner & QA',
         'host': 'Host'
       },
@@ -71,6 +78,10 @@ const SideworkApp = () => {
       sending: "Enviando...",
       emailSent: "¡Correo enviado exitosamente! Redirigiendo...",
       emailError: "Servicio de correo no disponible. Abriendo correo de respaldo...",
+      serverTasks: "Tareas de Mesero",
+      bartenderTasks: "Tareas de Bartender",
+      togoTasks: "Tareas de To-Go", 
+      busserTasks: "Tareas de Busser",
       back: "Atrás",
       am: "AM",
       pm: "PM", 
@@ -80,7 +91,10 @@ const SideworkApp = () => {
         'prep-dish': 'Prep & Dish',
         'line-cook': 'Line Cook',
         'janitorial': 'Janitorial', 
-        'server-bar': 'Server, Bar, To-Go, Busser',
+        'server': 'Mesero',
+        'bartender': 'Bartender',
+        'to-go': 'To-Go',
+        'busser': 'Busser',
         'runner-qa': 'Runner & QA',
         'host': 'Host'
       },
@@ -208,9 +222,9 @@ const SideworkApp = () => {
         sunday: ['Restrooms: Toilets/urinals, Sink/faucets, TP dispensers, Diaper stations, Partitions', 'Buffer/mop: Zone 4']
       }
     },
-    'server-bar': {
+    'server': {
       daily: {
-        server: [
+        general: [
           'Sanitize/charge headsets & iPad',
           'Tables, chairs, booths, ketchup & sweep section',
           'Remove batteries, sanitize & charge tabletop devices',
@@ -218,8 +232,21 @@ const SideworkApp = () => {
           'Server ledges: restock & wipe salt/pepper grinders',
           'FIFO dish',
           'Dust pan/broom'
-        ],
-        bartender: [
+        ]
+      },
+      weekly: {
+        monday: ['Clean keg cooler floors', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 2'],
+        tuesday: ['Stainless shelves/legs', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 1'],
+        wednesday: ['Bar ice bin', '*KS printers: remove paper, clear spool of buildup & wipe sides of printer', 'Tabletop devices', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 7'],
+        thursday: ['Ice cream freezer', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 6'],
+        friday: ['Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 5'],
+        saturday: ['To-Go: change storage containers', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 4'],
+        sunday: ['*Kegerator & Taylor machine', '*KS printers: remove paper, clear spool of buildup & wipe sides of printer', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 3']
+      }
+    },
+    'bartender': {
+      daily: {
+        general: [
           'Sanitize/charge headsets & iPad',
           'Bar top/tables, chairs, booths, ketchup & sweep section',
           'Remove batteries, sanitize & charge tabletop devices',
@@ -234,8 +261,21 @@ const SideworkApp = () => {
           'Bar/dining room floors',
           'Bar floor drains',
           'Bar windows/mirrors'
-        ],
-        'to-go': [
+        ]
+      },
+      weekly: {
+        monday: ['Clean keg cooler floors', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 2'],
+        tuesday: ['Stainless shelves/legs', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 1'],
+        wednesday: ['Bar ice bin', '*KS printers: remove paper, clear spool of buildup & wipe sides of printer', 'Tabletop devices', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 7'],
+        thursday: ['Ice cream freezer', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 6'],
+        friday: ['Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 5'],
+        saturday: ['To-Go: change storage containers', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 4'],
+        sunday: ['*Kegerator & Taylor machine', '*KS printers: remove paper, clear spool of buildup & wipe sides of printer', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 3']
+      }
+    },
+    'to-go': {
+      daily: {
+        general: [
           'Sanitize/charge headsets & iPad',
           'Restock all To-Go supplies',
           'Discard expired product & inform Manager',
@@ -244,8 +284,21 @@ const SideworkApp = () => {
           'Remove batteries, sanitize & charge tabletop devices',
           'Empty/re-line small trash cans',
           'Counter tops, shelves, door, spot sweep & window'
-        ],
-        busser: [
+        ]
+      },
+      weekly: {
+        monday: ['Clean keg cooler floors', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 2'],
+        tuesday: ['Stainless shelves/legs', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 1'],
+        wednesday: ['Bar ice bin', '*KS printers: remove paper, clear spool of buildup & wipe sides of printer', 'Tabletop devices', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 7'],
+        thursday: ['Ice cream freezer', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 6'],
+        friday: ['Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 5'],
+        saturday: ['To-Go: change storage containers', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 4'],
+        sunday: ['*Kegerator & Taylor machine', '*KS printers: remove paper, clear spool of buildup & wipe sides of printer', 'Table legs/bases', 'Chair legs/bases', 'Closers pull booths/tables away from walls in Zone 3']
+      }
+    },
+    'busser': {
+      daily: {
+        general: [
           'Sanitize/charge headsets',
           'Spot sweep door to door',
           'Run all bus tubs through dish & return to silverware shelf in dish area',
@@ -341,13 +394,8 @@ const SideworkApp = () => {
       Object.values(roleData.daily).forEach(tasks => {
         dailyTasks.push(...tasks);
       });
-    } else if (selectedRole === 'server-bar') {
-      // Show all server-bar tasks
-      Object.values(roleData.daily).forEach(tasks => {
-        dailyTasks.push(...tasks);
-      });
     } else {
-      // For other roles, show general daily tasks
+      // For all other roles (server, bartender, to-go, busser, runner-qa, host), show general daily tasks
       if (roleData.daily.general) {
         dailyTasks.push(...roleData.daily.general);
       }
@@ -608,6 +656,8 @@ Completion Rate: ${completionRate}%`;
             {daily.length > 0 && (
               <div className="bg-white rounded-lg shadow-xl p-6">
                 <h3 className="text-xl font-bold text-purple-900 mb-4">{t.dailySidework}</h3>
+                
+                {/* Regular task display for all roles */}
                 <div className="space-y-3">
                   {daily.map((task, index) => {
                     const taskId = `task-${index}`;
@@ -654,7 +704,7 @@ Completion Rate: ${completionRate}%`;
                     const taskId = `task-${daily.length + index}`;
                     const isCompleted = completedTasks[taskId];
                     return (
-                      <div key={taskId} className="border rounded-lg p-4">
+                      <div key={taskId} className="border rounded-lg p-4 bg-yellow-50">
                         <div className="flex items-start gap-3">
                           <button
                             onClick={() => toggleTask(taskId)}
@@ -666,7 +716,7 @@ Completion Rate: ${completionRate}%`;
                           </button>
                           <div className="flex-grow">
                             <div className={`font-medium ${isCompleted ? 'text-green-800 line-through' : 'text-gray-800'}`}>
-                              {task}
+                              ⭐ {task}
                             </div>
                             {!isCompleted && (
                               <input
