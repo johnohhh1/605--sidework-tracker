@@ -17,7 +17,7 @@ const SideworkApp = () => {
   // Translations
   const translations = {
     en: {
-      title: "Chili's Sidework Tracker",
+      title: "605's Sidework Tracker",
       selectRole: "Select Your Role",
       selectDay: "Select Day of Week",
       selectShift: "Select Shift",
